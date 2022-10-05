@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CallbackActivity">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/Auto_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textSet"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/auto"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/ins"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Auto_message"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/inst" />
+
+    <EditText
+        android:id="@+id/callback_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ins"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:gravity="top"
+
+        android:hint="@string/autoHint"
+        android:importantForAutofill="no"
+        android:inputType="none"
+        android:isScrollContainer="true"
+        android:maxLength="139" />
+
+    <Button
+        android:id="@+id/callback_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/callback_message"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/get" />
+
+    <Button
+        android:id="@+id/callback_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/callback_message"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/callback_get"
+        android:text="@string/save" />
+
+    <Button
+        android:id="@+id/callback_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/complete"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/textSet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/enableText"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/missAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/callback_set"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:text="@string/missAuto" />
+
+    <Button
+        android:id="@+id/callAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/missAuto"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:text="@string/callAuto" />
+
+    <TextView
+        android:id="@+id/autoMissTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/callback_set"
+        android:layout_alignBaseline="@id/missAuto"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/missAuto"
+        android:text="@string/selecTitle" />
+
+    <TextView
+        android:id="@+id/autoCallTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/autoMissTitle"
+        android:layout_alignBaseline="@id/callAuto"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/callAuto"
+        android:text="@string/selecTitle" />
+
+</RelativeLayout>
